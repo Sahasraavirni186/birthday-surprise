@@ -12,83 +12,83 @@ const birthdayData = {
 
   photos: [
     {
-      image: "/photos/photo01.jpg",
+      image: "/birthday-surprise/photos/photo01.jpg",
       message: "Together",
     },
     {
-      image: "/photos/photo02.jpg",
+      image: "/birthday-surprise/photos/photo02.jpg",
       message: "Gorgeous",
     },
     {
-      image: "/photos/photo03.jpg",
+      image: "/birthday-surprise/photos/photo03.jpg",
       message: "Forever",
     },
     {
-      image: "/photos/photo04.jpg",
+      image: "/birthday-surprise/photos/photo04.jpg",
       message: "Longlast",
     },
     {
-      image: "/photos/photo05.jpg",
+      image: "/birthday-surprise/photos/photo05.jpg",
       message: "Best Frame",
     },
     {
-      image: "/photos/photo06.jpg",
+      image: "/birthday-surprise/photos/photo06.jpg",
       message: "Your World",
     },
     {
-      image: "/photos/photo07.jpg",
+      image: "/birthday-surprise/photos/photo07.jpg",
       message: "sharing partners",
     },
     {
-      image: "/photos/photo08.jpg",
+      image: "/birthday-surprise/photos/photo08.jpg",
       message: "Mini version",
     },
     {
-      image: "/photos/photo09.jpg",
+      image: "/birthday-surprise/photos/photo09.jpg",
       message: "Lovely",
     },
     {
-      image: "/photos/photo10.jpg",
+      image: "/birthday-surprise/photos/photo10.jpg",
       message: "😘",
     },
     {
-      image: "/photos/photo11.jpg",
+      image: "/birthday-surprise/photos/photo11.jpg",
       message: "Sigging😁",
     },
     {
-      image: "/photos/photo12.jpg",
+      image: "/birthday-surprise/photos/photo12.jpg",
       message: "1 Year for this",
     },
     {
-      image: "/photos/photo13.jpg",
+      image: "/birthday-surprise/photos/photo13.jpg",
       message: "Phool",
     },
     {
-      image: "/photos/photo14.jpg",
+      image: "/birthday-surprise/photos/photo14.jpg",
       message: "picchuu",
     },
     {
-      image: "/photos/photo15.jpg",
+      image: "/birthday-surprise/photos/photo15.jpg",
       message: "Cuteee😘",
     },
     {
-      image: "/photos/photo16.jpg",
+      image: "/birthday-surprise/photos/photo16.jpg",
       message: "Sun is under control",
     },
     {
-      image: "/photos/photo17.jpg",
+      image: "/birthday-surprise/photos/photo17.jpg",
       message: "perfect",
     },
     {
-      image: "/photos/photo18.jpg",
+      image: "/birthday-surprise/photos/photo18.jpg",
       message: "💕",
     },
     {
-      image: "/photos/photo19.jpg",
+      image: "/birthday-surprise/photos/photo19.jpg",
       message: "😍",
     },
     {
-      image: "/photos/photo20.jpg",
+      image: "/birthday-surprise/photos/photo20.jpg",
       message: "😽",
     },
   ],
