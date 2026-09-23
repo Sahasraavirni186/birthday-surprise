@@ -1,0 +1,176 @@
+.opening {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  font-family: var(--font-body);
+  isolation: isolate;
+}
+
+.opening-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle at 20% 30%,
+      rgba(255, 183, 197, 0.12) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(173, 132, 252, 0.1) 0%,
+      transparent 50%
+    );
+  background-size: 200% 200%;
+  animation: gradientShift 20s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.opening-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      ellipse at center,
+      transparent 30%,
+      rgba(0, 0, 0, 0.25) 70%,
+      rgba(0, 0, 0, 0.45) 100%
+    );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.opening-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.opening-text {
+  margin-bottom: 56px;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.opening-text p,
+.opening-ready {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 768px) {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+}
+
+.ready-subtext {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  letter-spacing: 0.03em;
+  opacity: 0.8;
+  margin: 0;
+  margin-top: 12px;
+}
+
+.friend-name {
+  font-weight: 500;
+  background: linear-gradient(135deg, #ffb7c5, #a8edea, #dcaffc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.enter-btn {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 44px;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 14px 36px;
+    font-size: 0.95rem;
+  }
+}
+
+.enter-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  padding: 1px;
+  background: linear-gradient(135deg, #ff9a9e, #a8edea, #dcaffc);
+  mask:
+    linear-gradient(#fff 0 0 0, #000 1px) content-box,
+    linear-gradient(#fff 0 0 0, #000 1px);
+  -webkit-mask-composite: destination-out;
+  mask-composite: destination-out;
+  pointer-events: none;
+}
+
+.enter-btn:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(173, 132, 252, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.enter-btn:active {
+  transform: scale(0.92);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .opening-bg {
+    animation: none;
+  }
+
+  .opening-text p,
+  .opening-ready,
+  .enter-btn {
+    transition: none;
+  }
+}

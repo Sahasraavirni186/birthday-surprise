@@ -1,0 +1,145 @@
+.photo-card-wrapper {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+.photo-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fffaf0;
+  border-radius: 12px;
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.08),
+    0 4px 12px rgba(0, 0, 0, 0.05),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #f0e6d2;
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.photo-card-wrapper:hover .photo-frame {
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.15),
+    0 8px 24px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+}
+
+.photo-inner {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: #f0ecfe;
+}
+
+.photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.photo-card-wrapper:hover .photo-img {
+  transform: scale(1.05);
+  filter: brightness(1.08) saturate(1.05);
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f0ecfe 0%, #fdeaae 50%, #a8edea 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.placeholder-icon {
+  font-size: 2rem;
+  opacity: 0.6;
+  color: #5a5269;
+}
+
+.placeholder-text {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #8a8298;
+  letter-spacing: 0.03em;
+}
+
+.photo-caption {
+  padding: 14px 16px;
+  background: #fffaf0;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.photo-title {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #5a5269;
+  margin-bottom: 2px;
+  letter-spacing: 0.01em;
+}
+
+.photo-date {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: #8a8298;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .photo-caption {
+    padding: 12px 14px;
+  }
+
+  .photo-title {
+    font-size: 0.78rem;
+  }
+
+  .photo-date {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-caption {
+    padding: 10px 12px;
+  }
+
+  .photo-title {
+    font-size: 0.75rem;
+  }
+
+  .photo-date {
+    font-size: 0.68rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-card-wrapper:hover .photo-frame {
+    transform: none;
+  }
+
+  .photo-img,
+  .photo-card-wrapper:hover .photo-img {
+    transform: none;
+    filter: none;
+  }
+
+  .photo-frame {
+    transition: none;
+  }
+}
